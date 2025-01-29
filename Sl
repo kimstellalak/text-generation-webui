@@ -1,0 +1,10 @@
+# Install necessary dependencies
+!apt update && apt install -y wget git python3 python3-venv
+
+# Clone Oobabooga's Text Generation WebUI
+!git clone https://github.com/oobabooga/text-generation-webui.git
+%cd text-generation-webui
+
+# Install requirements
+!pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+!pip install -r requirements.txt
